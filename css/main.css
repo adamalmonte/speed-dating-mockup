@@ -1,0 +1,91 @@
+body {
+    min-height: 100vh;
+    background-color: #e9ecef;
+}
+
+#profile-pic {
+    border: none;
+    background-color: transparent;
+    padding-left: 0;
+    width: auto;
+}
+
+.ranking-grid {
+  position: relative;
+}
+
+.ranking-grid__item {
+  display: block;
+  position: absolute;
+  margin: 5px;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  line-height: 200px;
+  z-index: 1;
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.ranking-grid__item.muuri-item-hidden {
+  z-index: 0;
+}
+
+.ranking-grid__item.muuri-item-positioning {
+  z-index: 2;
+}
+
+.ranking-grid__item.muuri-item-releasing {
+  z-index: 3;
+}
+
+.ranking-grid__item.muuri-item-dragging {
+  background-color: #ffc107;
+  color: #000;
+  z-index: 4;
+}
+
+.ranking-grid__item-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.ranking-grid__item-name {
+    padding: 0.5rem 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.ranking-grid__item-image {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.ranking-grid__item.ranking-grid__item--top-ten {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+    .ranking-grid__item {
+      width: calc((100% / 3) - 10px);
+      height: 255px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .ranking-grid__item {
+      height: 338px;
+    }    
+}
+
+@media only screen and (min-width: 1024px) {
+    .ranking-grid__item {
+      width: calc(20% - 10px);
+      height: 250px;
+    }
+}
+
